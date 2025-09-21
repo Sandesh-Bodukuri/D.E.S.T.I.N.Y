@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.E.S.T.I.N.Y - Career Navigator</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Career Navigator</h1>
+        <p>Enter your skills and interests below, or take our aptitude test to discover personalized career paths powered by AI.</p>
+
+        <form id="navigator-form">
+            <div class="form-group">
+                <label for="skills">Your Skills</label>
+                <textarea id="skills" name="skills" rows="4" placeholder="e.g., python, project management, graphic design"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="interests">Your Interests</label>
+                <textarea id="interests" name="interests" rows="4" placeholder="e.g., artificial intelligence, sustainable energy, education"></textarea>
+            </div>
+            <button type="submit" id="submit-btn">Find My Path</button>
+        </form>
+
+        <div class="aptitude-section">
+            <p>Unsure about your skills? Find out with a quick test.</p>
+            <button type="button" id="start-aptitude-btn">Start Aptitude Test</button>
+        </div>
+
+        <div id="results-container"></div>
+    </div>
+
+    <!-- Aptitude Test Modal -->
+    <div id="aptitude-modal" class="modal-hidden">
+        <div class="modal-content" id="aptitude-modal-content">
+            <p id="question-number"></p>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+            <p id="feedback-text"></p>
+            <button id="next-question-btn" class="modal-hidden">Next</button>
+        </div>
+    </div>
+
+    <!-- AI Counselor Chat Modal -->
+    <div id="chat-modal" class="modal-hidden">
+        <div class="modal-content" id="chat-modal-content">
+            <div class="chat-header">
+                <h3>AI Career Counselor</h3>
+                <button id="close-chat-btn">&times;</button>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <!-- Chat messages will be appended here -->
+            </div>
+            <div class="chat-input-area" id="chat-input-area">
+                <!-- Pre-defined user questions will be here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./static/script.js"></script>
+</body>
+</html>

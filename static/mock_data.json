@@ -1,0 +1,17 @@
+[
+    {
+        "title": "AI Specialist (Demo Data)",
+        "description": "This is a placeholder response. This career focuses on developing cutting-edge AI technologies and algorithms, working on machine learning models, and deploying AI solutions.",
+        "skill_gaps": ["Advanced Python", "TensorFlow/PyTorch", "Cloud Computing (GCP/AWS)"]
+    },
+    {
+        "title": "Data Scientist (Demo Data)",
+        "description": "This is a placeholder response. Data Scientists analyze large, complex data sets to identify trends, make predictions, and drive business decisions through data.",
+        "skill_gaps": ["Statistical Analysis", "SQL Databases", "Data Visualization Tools (Tableau)"]
+    },
+    {
+        "title": "UX/UI Designer (Demo Data)",
+        "description": "This is a placeholder response. A UX/UI designer creates user-friendly interfaces for websites and applications, focusing on user experience and visual design.",
+        "skill_gaps": ["Figma/Sketch", "User Research", "Prototyping"]
+    }
+]
