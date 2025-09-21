@@ -12,6 +12,7 @@
         <h1>Career Navigator</h1>
         <p>Enter your skills and interests below, or take our aptitude test to discover personalized career paths powered by AI.</p>
 
+        <!-- Main Form -->
         <form id="navigator-form">
             <div class="form-group">
                 <label for="skills">Your Skills</label>
@@ -24,11 +25,13 @@
             <button type="submit" id="submit-btn">Find My Path</button>
         </form>
 
+        <!-- Aptitude Test Section -->
         <div class="aptitude-section">
             <p>Unsure about your skills? Find out with a quick test.</p>
             <button type="button" id="start-aptitude-btn">Start Aptitude Test</button>
         </div>
 
+        <!-- Results Container -->
         <div id="results-container"></div>
     </div>
 
@@ -45,20 +48,4 @@
 
     <!-- AI Counselor Chat Modal -->
     <div id="chat-modal" class="modal-hidden">
-        <div class="modal-content" id="chat-modal-content">
-            <div class="chat-header">
-                <h3>AI Career Counselor</h3>
-                <button id="close-chat-btn">&times;</button>
-            </div>
-            <div class="chat-box" id="chat-box">
-                <!-- Chat messages will be appended here -->
-            </div>
-            <div class="chat-input-area" id="chat-input-area">
-                <!-- Pre-defined user questions will be here -->
-            </div>
-        </div>
-    </div>
-
-    <script src="./static/script.js"></script>
-</body>
-</html>
+        <div class="
