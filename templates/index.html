@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.E.S.T.I.N.Y - Career Navigator</title>
-    <link rel="stylesheet" href="./static/style.css">
+    <!-- UPDATED LINE -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
@@ -48,4 +49,17 @@
 
     <!-- AI Counselor Chat Modal -->
     <div id="chat-modal" class="modal-hidden">
-        <div class="
+        <div class="modal-content" id="chat-modal-content">
+            <div class="chat-header">
+                <h3>AI Career Counselor</h3>
+                <button id="close-chat-btn">&times;</button>
+            </div>
+            <div class="chat-box" id="chat-box"></div>
+            <div class="chat-input-area" id="chat-input-area"></div>
+        </div>
+    </div>
+
+    <!-- UPDATED LINE -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
