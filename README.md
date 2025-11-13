@@ -1,4 +1,4 @@
-# D.E.S.T.I.N.Y - Career Navigator
+# D.E.S.T.I.N.Y - Career Navigator [Discover Every Skill that Is Now Yours]
 
 D.E.S.T.I.N.Y is an AI-powered career navigation web app built with Flask and Google Vertex AI Gemini Pro. It helps users discover personalized career paths based on their skills and interests.
 
