@@ -81,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
         showQuestion();
     });
 
+    const closeAptitudeBtn = document.getElementById('close-aptitude-modal');
+    closeAptitudeBtn.addEventListener('click', () => aptitudeModal.classList.add('modal-hidden'));
+
     nextBtn.addEventListener('click', () => {
         currentQuestionIndex++;
         if (currentQuestionIndex < aptitudeQuestions.length) {

@@ -4,62 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.E.S.T.I.N.Y - Career Navigator</title>
-    <!-- UPDATED LINE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">D.E.S.T.I.N.Y</h1>
+            <nav class="nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-        <h1>Career Navigator</h1>
-        <p>Enter your skills and interests below, or take our aptitude test to discover personalized career paths powered by AI.</p>
-
-        <!-- Main Form -->
-        <form id="navigator-form">
-            <div class="form-group">
-                <label for="skills">Your Skills</label>
-                <textarea id="skills" name="skills" rows="4" placeholder="e.g., python, project management, graphic design"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="interests">Your Interests</label>
-                <textarea id="interests" name="interests" rows="4" placeholder="e.g., artificial intelligence, sustainable energy, education"></textarea>
-            </div>
-            <button type="submit" id="submit-btn">Find My Path</button>
-        </form>
-
-        <!-- Aptitude Test Section -->
-        <div class="aptitude-section">
-            <p>Unsure about your skills? Find out with a quick test.</p>
-            <button type="button" id="start-aptitude-btn">Start Aptitude Test</button>
+    <main class="main-content">
+        <div class="hero">
+            <h2>Welcome to Your Career Journey</h2>
+            <p>Discover personalized career paths with AI-powered insights.</p>
         </div>
 
-        <!-- Results Container -->
-        <div id="results-container"></div>
-    </div>
+        <div class="container">
+            <h1>Career Navigator</h1>
+            <p>Enter your skills and interests below, or take our aptitude test to discover personalized career paths powered by AI.</p>
+
+            <!-- Main Form -->
+            <form id="navigator-form" class="form">
+                <div class="form-group">
+                    <label for="skills"><i class="fas fa-tools"></i> Your Skills</label>
+                    <textarea id="skills" name="skills" rows="4" placeholder="e.g., python, project management, graphic design"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="interests"><i class="fas fa-heart"></i> Your Interests</label>
+                    <textarea id="interests" name="interests" rows="4" placeholder="e.g., artificial intelligence, sustainable energy, education"></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="btn-primary"><i class="fas fa-search"></i> Find My Path</button>
+            </form>
+
+            <!-- Aptitude Test Section -->
+            <div class="aptitude-section">
+                <h3><i class="fas fa-brain"></i> Unsure about your skills?</h3>
+                <p>Find out with a quick aptitude test.</p>
+                <button type="button" id="start-aptitude-btn" class="btn-secondary"><i class="fas fa-play"></i> Start Aptitude Test</button>
+            </div>
+
+            <!-- Results Container -->
+            <div id="results-container" class="results"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 D.E.S.T.I.N.Y. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <!-- Aptitude Test Modal -->
-    <div id="aptitude-modal" class="modal-hidden">
-        <div class="modal-content" id="aptitude-modal-content">
-            <p id="question-number"></p>
-            <h2 id="question-text"></h2>
-            <div id="options-container"></div>
-            <p id="feedback-text"></p>
-            <button id="next-question-btn" class="modal-hidden">Next</button>
+    <div id="aptitude-modal" class="modal modal-hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Aptitude Test</h2>
+                <button class="close-btn" id="close-aptitude-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="question-number"></p>
+                <h3 id="question-text"></h3>
+                <div id="options-container"></div>
+                <p id="feedback-text"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="next-question-btn" class="btn-primary modal-hidden">Next</button>
+            </div>
         </div>
     </div>
 
     <!-- AI Counselor Chat Modal -->
-    <div id="chat-modal" class="modal-hidden">
-        <div class="modal-content" id="chat-modal-content">
+    <div id="chat-modal" class="modal modal-hidden">
+        <div class="modal-content chat-modal-content">
             <div class="chat-header">
-                <h3>AI Career Counselor</h3>
-                <button id="close-chat-btn">&times;</button>
+                <h3><i class="fas fa-robot"></i> AI Career Counselor</h3>
+                <button id="close-chat-btn" class="close-btn">&times;</button>
             </div>
             <div class="chat-box" id="chat-box"></div>
             <div class="chat-input-area" id="chat-input-area"></div>
         </div>
     </div>
 
-    <!-- UPDATED LINE -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
